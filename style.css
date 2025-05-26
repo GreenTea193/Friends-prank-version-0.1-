@@ -1,0 +1,93 @@
+body {
+  background-color: royalblue;
+  display: flex;
+  flex-direction: column; /* Заголовок и кнопки вертикально */
+  align-items: center; /* Выравнивание по центру */
+  gap: 20px;
+  padding: 20px;
+  text-align: center; /* Для заголовка (на случай переноса текста) */
+}
+
+.buttons-container {
+  display: flex;
+  gap: 10px; /* Расстояние между кнопками */
+}
+
+button {
+  border-radius: 10px;
+  background-color: aqua;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+h1 {
+  margin-top: 0px;
+  font-family: Arial, sans-serif;
+  color: whitesmoke;
+}
+
+p{
+  margin-top: 0px;
+  font-size: 4px;
+  color: darkblue;
+}
+
+/* ... предыдущие стили ... */
+
+/* Чёрный режим */
+
+/* Скример */
+#screamer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  z-index: 1000;
+}
+
+#screamer img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Добавим анимацию инверсии */
+@keyframes infiniteInvert {
+  0% { filter: invert(0%); }
+  50% { filter: invert(100%); }
+  100% { filter: invert(0%); }
+}
+
+.inverting {
+  animation: infiniteInvert 0.1s infinite linear;
+}
+
+#threat-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  z-index: 1001;
+}
+
+#countdown {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: white;
+}
